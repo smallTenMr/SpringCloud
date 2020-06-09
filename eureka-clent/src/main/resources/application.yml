@@ -1,0 +1,15 @@
+server :
+  port : 8762
+
+spring:
+  application:
+    #注册到Eureka server 上的应用名称
+    name: EurekaClient
+
+eureka:
+  clent:
+    serviceUrl:
+      defaultZone: http://10.61.14.26:8761/eureka/
+  instance:
+     #表示将自己的IP注册到Eureka server ，该配置默认false，表示将所在计算机系统的hostname注册到Eureka server
+      prefer-ip-address: true
